@@ -9,7 +9,7 @@ const paths = [
   },
   {
     id: 3,
-    path: "assets/exp-coupled-pendulum/simulation/index.html",
+    path: "assets/exp-coupled-pendulum/simulation/angular.html",
   },
 ];
 
