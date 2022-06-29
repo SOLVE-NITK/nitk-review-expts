@@ -11,96 +11,419 @@
       crossorigin="anonymous"
     />
   </head>
+  <link rel="stylesheet" href="style.css" />
   <body>
-    <nav class="navbar bg-light">
+    <nav class="navbar bg-dark">
       <div class="container-fluid justify-content-center">
-        <span class="navbar-brand mb-0 h1 text-uppercase"
+        <span class="navbar-brand mb-0 h1 text-uppercase text-white"
           >SOLVE - Mechanical Engineering - NITK</span
         >
       </div>
     </nav>
     <div class="row p-5">
-      <div class="col-md-4">
-        <div class="card mb-3" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-12">
-              <div class="card-body">
-                <h5 class="card-title">Engineering Graphics Lab</h5>
-                <p class="card-text">
-                  The intention of developing an Engineering graphics virtual
-                  lab is to provide a quick, easy and visual process for
-                  students to start experimenting with Engineering graphics
-                  concepts.
-                </p>
-                <p class="card-text">
-                  <button
-                    type="button"
-                    class="btn btn-dark"
-                    onclick="displaySimulator(1)"
-                    title="Click here"
-                  >
-                    Projection of Planes
-                  </button>
-                </p>
+      <div class="col-md-3" id="labCards">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Engineering Graphics Lab
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Projection of Planes
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Projection of point and conventions
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Introduction to engineering drawing
+                </button>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-12">
-              <div class="card-body">
-                <h5 class="card-title">Heat Transfer Lab</h5>
-                <p class="card-text">
-                  The intention of Heat Transfer virtual lab is to provide a
-                  quick, easy and visual process for students to start
-                  experimenting with Heat transfer concepts.
-                </p>
-                <p class="card-text">
-                  <button
-                    type="button"
-                    class="btn btn-dark"
-                    onclick="displaySimulator(2)"
-                    title="Click here"
-                  >
-                    Thermal Conductivity of a Metal Rod
-                  </button>
-                </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Heat Transfer Lab
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Thermal Conductivity
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Composite Slab Apparatus
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Test on Heat Exchangers
+                </button>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-12">
-              <div class="card-body">
-                <h5 class="card-title">Vibration Lab</h5>
-                <p class="card-text">
-                  Vibration Laboratory is a modern facility for performing a
-                  wide range of experiments in the field of vibration. The goal
-                  of this lab is to demonstrate students how to do vibration
-                  analysis on mechanical components.
-                </p>
-                <p class="card-text">
-                  <button
-                    type="button"
-                    class="btn btn-dark"
-                    onclick="displaySimulator(3)"
-                    title="Click here"
-                  >
-                    Coupled Pendulum
-                  </button>
-                </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Engineering Mechanics
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Coupled Pendulum
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Two Pulley System
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Cart moving on a Circular Track
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                Additive Manufacturing Lab
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Effect of FDM process parameters on ultimate tensile strength
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Effect of Laser cutting process parameters on surface
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Effect of SLM process parameters on ultimate tensile strength
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                Kinematics of Machine
+              </button>
+            </h2>
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Epicyclic Gear Train
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Compound Gear Train
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Reverted Gear Train
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSix"
+                aria-expanded="false"
+                aria-controls="collapseSix"
+              >
+                Manufacturing Lab
+              </button>
+            </h2>
+            <div
+              id="collapseSix"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingSix"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Arc Welding(V-Butt)
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Friction Welding
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Blow Moulding
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven"
+                aria-expanded="false"
+                aria-controls="collapseSeven"
+              >
+                Thermodynamics Lab
+              </button>
+            </h2>
+            <div
+              id="collapseSeven"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingSeven"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  II law of thermodynamcis
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Carnot Cycle
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Ericsson Cycle
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEight">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseEight"
+                aria-expanded="false"
+                aria-controls="collapseEight"
+              >
+                UAV Lab
+              </button>
+            </h2>
+            <div
+              id="collapseEight"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingEight"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Determination of Motor Thrust</button
+                ><button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Assembly of Quadcopter</button
+                ><button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Caliberation of Quadcopter
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingNine">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseNine"
+                aria-expanded="false"
+                aria-controls="collapseNine"
+              >
+                Management Lab
+              </button>
+            </h2>
+            <div
+              id="collapseNine"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingNine"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Break Even Analysis
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Law of Demand
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                  Law of Supply
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-8 my-0" id="frames">
+      <div class="col-md-9 my-0" id="frames">
         <iframe
           id="frame"
           src=""
-          height="1000"
+          height="1200"
           width="1000"
           title="Iframe Example"
         ></iframe

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SOLVE - MECH</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <div class="container-fluid justify-content-center">
+        <span class="navbar-brand mb-0 h1 text-uppercase text-white"
+          >SOLVE - Mechanical Engineering - NITK</span
+        >
+      </div>
+    </nav>
+    <div class="row p-5">
+      <div class="col-md-4" id="labCards">
+        <!-- <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-12">
+              <div class="card-body">
+                <h5 class="card-title">Engineering Graphics Lab</h5>
+                <p class="card-text">
+                  <button
+                    type="button"
+                    class="btn btn-dark"
+                    onclick="displaySimulator(1)"
+                    title="Click here"
+                  >
+                    Projection of Planes
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-12">
+              <div class="card-body">
+                <h5 class="card-title">Heat Transfer Lab</h5>
+                <p class="card-text">
+                  <button
+                    type="button"
+                    class="btn btn-dark"
+                    onclick="displaySimulator(2)"
+                    title="Click here"
+                  >
+                    Thermal Conductivity of a Metal Rod
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-12">
+              <div class="card-body">
+                <h5 class="card-title">Vibration Lab</h5>
+                <p class="card-text">
+                  <button
+                    type="button"
+                    class="btn btn-dark"
+                    onclick="displaySimulator(3)"
+                    title="Click here"
+                  >
+                    Coupled Pendulum
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="col-md-8 my-0" id="frames">
+        <iframe
+          id="frame"
+          src=""
+          height="1000"
+          width="1000"
+          title="Iframe Example"
+        ></iframe
+        >;
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
+
+<div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree"
+              >
+                Vibration Lab
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingThree"
+            >
+              <div class="accordion-body">
+                <button type="button" class="btn btn-outline-dark w-100 m-2">
+                  Coupled Pendulum
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+const paths = [
+  {
+    id: 1,
+    lab: "Engineering Graphics Lab",
+    path: [
+      {
+        name: "Projection of Planes",
+        url: "assets/exp-projection-of-planes/simulation/index.html",
+      },
+      {
+        name: "Projection of point and conventions",
+        url: "assets/exp-projection-of-planes/simulation/index.html",
+      },
+      {
+        name: "Introduction to engineering drawing",
+        url: "assets/exp-projection-of-planes/simulation/index.html",
+      },
+    ],
+  },
+  {
+    id: 2,
+    lab: "Heat Transfer Lab",
+    // path: "assets/exp-thermal-conductivity/simulation/index.html",
+    path: [
+      {
+        name: "Thermal Conductivity",
+        url: "assets/exp-thermal-conductivity/simulation/index.html",
+      },
+      {
+        name: "Projection of point and conventions",
+        url: "assets/exp-projection-of-planes/simulation/index.html",
+      },
+      {
+        name: "Introduction to engineering drawing",
+        url: "assets/exp-projection-of-planes/simulation/index.html",
+      },
+    ],
+  },
+  {
+    id: 3,
+    lab: "Vibration Lab",
+    // path: "assets/exp-coupled-pendulum/simulation/angular.html",
+    path: [
+      {
+        name: "Coupled Pendulum",
+        url: "assets/exp-coupled-pendulum/simulation/angular.html",
+      },
+      {
+        name: "Projection of point and conventions",
+        url: "assets/exp-projection-of-planes/simulation/index.html",
+      },
+      {
+        name: "Introduction to engineering drawing",
+        url: "assets/exp-thermal-conductivity/simulation/index.html",
+      },
+    ],
+  },
+];
+
+const displayExperiments = (index, list) => {
+  let buttons = "";
+  let btn = "";
+  // for (const element of list) {
+  //   buttons += `<button
+  //                type="button"
+  //               class="btn btn-dark m-1"
+  //               onclick=${displaySimulator(element.url)}
+  //               title="Click here"
+  //              >
+  //               ${element.name}
+  //             </button>`;
+  // }
+  list.map((element, ind) => {
+    // let button = document.createElement("button");
+    // button.type = "button";
+    // button.className = "btn btn-dark m-1";
+    // button.id = `${element.name + index}`;
+    // button.onclick = `${displaySimulator(element.url)}`;
+    // button.name = `${element.name}`;
+    let id = `${element.name + ind}`;
+    btn = `<button
+    id=${element.name + ind}
+                 type="button"
+                class="btn btn-dark m-1"
+                title="Click here"
+               >
+                ${element.name}
+              </button>`;
+    console.log(btn.id);
+    btn = document.getElementById(id);
+    btn.addEventListener("click", function () {
+      displaySimulator(id, element.url);
+    });
+    // buttons += button;
+    // document.getElementById(cardId).appendChild(buttons);
+  });
+  return buttons;
+};
+// onclick=${displaySimulator(element.name + index, element.url)}
+
+function displaySimulator(e, url) {
+  console.log(e, url);
+  document.getElementById("frame").src = `${url}`;
+}
+let labCards = document.querySelector("#labCards");
+let labCardsData = "";
+const displayLabCards = () => {
+  paths.map((lab, index) => {
+    labCardsData += `<div class="card mb-3" style="max-width: 540px">
+      <div class="row g-0">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">${lab.lab}</h5>
+            <p class="card-text">
+              ${displayExperiments(index, lab.path)}
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  });
+  labCards.innerHTML = labCardsData;
+};
+displayLabCards();
+
+const createButtons = () => {
+  const btn = `<button
+                 type="button"
+                class="btn btn-dark m-1"
+                onclick=${displaySimulator(element.url)}
+                title="Click here"
+               >
+                ${element.name}
+              </button>`;
+};
+
+// Engg Graphics:
+// 2. Projection of point and conventions
+// 3. Introduction to engineering drawing
+
+// Heat Transfer Lab:
+// 2. Composite Slab Apparatus
+// 3. Test on Heat Exchangers
+
+// Additive Manufacturing Lab(from link):
+// 1. Effect of FDM process parameters on ultimate tensile strength
+// 2.  Effect of laser cutting process parameters on cut surface
+                  roughness
+// 3. Effect of SLM process parameters on ultimate tensile strength
+
+// Kinematics of Machine:
+// 1. Epicyclic Gear Train
+// 2. Compound Gear Train
+// 3. Reverted Gear Train
+
+// Manufacturing Lab:
+// 1. Arc Welding(V-Butt)
+// 2. Friction Welding
+// 3. Blow Moulding
+
+// Thermodynamics Lab
+// 1. II law of thermodynamcis
+// 2. Carnot Cycle
+// 3. Ericsson Cycle
+
+
+
+
+
+
