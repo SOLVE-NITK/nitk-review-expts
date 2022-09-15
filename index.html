@@ -10,13 +10,16 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
   <link rel="stylesheet" href="style.css" />
   <body>
-    <nav class="navbar bg-dark">
+    <nav class="navbar">
       <div class="container-fluid justify-content-center">
         <span class="navbar-brand mb-0 h1 text-uppercase text-white"
-          >SOLVE - Mechanical Engineering - NITK</span
+          >SOLVE - Labs Pending for Approval - NITK</span
         >
       </div>
     </nav>
@@ -24,95 +27,9 @@
       <div class="col-md-3" id="labCards">
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                Engineering Graphics Lab
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  onclick="displayExperiment(this)"
-                >
-                  Projection of Planes
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  onclick="displayExperiment(this)"
-                >
-                  Projection of point and conventions
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  onclick="displayExperiment(this)"
-                >
-                  Introduction to engineering drawing
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                Heat Transfer Lab
-              </button>
-            </h2>
-            <div
-              id="collapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingTwo"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  onclick="displayExperiment(this)"
-                >
-                  Thermal Conductivity
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  onclick="displayExperiment(this)"
-                >
-                  Composite Slab Apparatus
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  onclick="displayExperiment(this)"
-                >
-                  Test on Heat Exchangers
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
+
             <h2 class="accordion-header" id="headingThree">
+
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -121,8 +38,12 @@
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
+              <span class="tag">MECH</span>
+
                 Engineering Mechanics
+                
               </button>
+
             </h2>
             <div
               id="collapseThree"
@@ -130,14 +51,8 @@
               aria-labelledby="headingThree"
               data-bs-parent="#accordionExample"
             >
+            
               <div class="accordion-body">
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  onclick="displayExperiment(this)"
-                >
-                  Coupled Pendulum
-                </button>
                 <button
                   type="button"
                   class="btn btn-outline-secondary"
@@ -165,6 +80,8 @@
                 aria-expanded="false"
                 aria-controls="collapseFour"
               >
+              <span class="tag">MECH</span>
+
                 Additive Manufacturing Lab
               </button>
             </h2>
@@ -209,6 +126,8 @@
                 aria-expanded="false"
                 aria-controls="collapseFive"
               >
+              <span class="tag">MECH</span>
+
                 Kinematics of Machine
               </button>
             </h2>
@@ -253,6 +172,8 @@
                 aria-expanded="false"
                 aria-controls="collapseSix"
               >
+              <span class="tag">MECH</span>
+
                 Manufacturing Lab
               </button>
             </h2>
@@ -297,6 +218,8 @@
                 aria-expanded="false"
                 aria-controls="collapseSeven"
               >
+              <span class="tag">MECH</span>
+
                 Thermodynamics Lab
               </button>
             </h2>
@@ -341,6 +264,8 @@
                 aria-expanded="false"
                 aria-controls="collapseEight"
               >
+              <span class="tag">MECH</span>
+
                 UAV Lab
               </button>
             </h2>
@@ -383,6 +308,8 @@
                 aria-expanded="false"
                 aria-controls="collapseNine"
               >
+              <span class="tag">MECH</span>
+
                 Management Lab
               </button>
             </h2>
@@ -398,6 +325,7 @@
                   class="btn btn-outline-secondary"
                   onclick="displayExperiment(this)"
                 >
+
                   Break Even Analysis
                 </button>
                 <button
@@ -413,6 +341,96 @@
                   onclick="displayExperiment(this)"
                 >
                   Law of Supply
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTen">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTen"
+                aria-expanded="false"
+                aria-controls="collapseTen"
+              >
+              <span class="tag">MECH</span>
+                Physical Metallurgy Lab
+              </button>
+            </h2>
+            <div
+              id="collapseTen"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTen"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                Determination of crystal structure of a powder sample by X-Ray Diffractometer
+              </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                Grain Size measurement
+              </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                Optical microscopy of Non ferrous samples
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEleven">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseEleven"
+                aria-expanded="false"
+                aria-controls="collapseEleven"
+              >
+              <span class="tag2">Civil</span>
+              Mining Environmental Lab
+              </button>
+            </h2>
+            <div
+              id="collapseEleven"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingEleven"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                Determination of crystal structure of a powder sample by X-Ray Diffractometer
+              </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                Grain Size measurement
+              </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="displayExperiment(this)"
+                >
+                Optical microscopy of Non ferrous samples
                 </button>
               </div>
             </div>

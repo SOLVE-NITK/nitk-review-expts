@@ -1,15 +1,24 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+.navbar{
+  background-color: rgb(96, 96, 180);
+}
 .card {
   border-radius: 4px;
   background: #fff;
+  
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
-    0.3s box-shadow,
-    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  transition: transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+     box-shadow,
+   -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   /* padding: 14px 80px 18px 36px; */
   cursor: pointer;
+  margin-bottom: 15px;
 }
 
 .card:hover {
+  
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
@@ -17,4 +26,32 @@
 button {
   margin: 0.2em;
   width: 100%;
+  font-weight: 800;
+}
+
+.tag{
+  position: absolute;
+  left: -15px;
+  top:50%;
+  font-size: 12px;
+  background-color:rgb(96, 96, 180);
+  color: white;
+  padding: 8px 5px 8px 5px;
+  margin-left: -10px;
+  margin-top: -15px;
+  border-radius: 26px;
+  z-index:110px;
+}
+.tag2{
+  position: absolute;
+  left: -15px;
+  top:50%;
+  font-size: 12px;
+  background-color:rgb(245, 109, 109);
+  color: white;
+  padding: 8px 5px 8px 5px;
+  margin-left: -10px;
+  margin-top: -15px;
+  border-radius: 26px;
+  z-index:110px;
 }

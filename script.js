@@ -1,28 +1,6 @@
 const URLS = [
-  {
-    name: "Projection of Planes",
-    url: "assets/exp-projection-of-planes/simulation/index.html",
-  },
-  {
-    name: "Projection of point and conventions",
-    url: "assets/point/index.html",
-  },
-  {
-    name: "Introduction to engineering drawing",
-    url: "assets/drawing/index.html",
-  },
-  {
-    name: "Thermal Conductivity",
-    url: "assets/exp-thermal-conductivity/simulation/index.html",
-  },
-  {
-    name: "Composite Slab Apparatus",
-    url: "assets/slab/index.html",
-  },
-  {
-    name: "Test on Heat Exchangers",
-    url: "assets/heat/index.html",
-  },
+  
+  
   {
     name: "Coupled Pendulum",
     url: "assets/exp-coupled-pendulum/simulation/angular.html",
@@ -106,6 +84,18 @@ const URLS = [
   {
     name: "Law of Supply",
     url: "assets/supply/index.html",
+  },
+  {
+    name: "Determination of crystal structure of a powder sample by X-Ray Diffractometer",
+    url: "assets/crystal/index.html",
+  },
+  {
+    name: "Grain Size measurement",
+    url: "assets/grain/index.html",
+  },
+  {
+    name: "Optical microscopy of Non ferrous samples",
+    url: "assets/optical/index.html",
   },
 ];
 
